@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GuardianNews</string>
+    <string name="search">Search</string>
+    <string name="search_terms">Search Terms</string>
+    <string name="load_more">Load More</string>
+    <string name="section_name_placeholder">Section Name Placeholder</string>
+    <string name="news_title_placeholder">News Title Placeholder</string>
+</resources>
