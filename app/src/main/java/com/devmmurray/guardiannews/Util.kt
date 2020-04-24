@@ -59,14 +59,15 @@ internal fun parseJson(jsonData: String): ArrayList<Data> {
         val response = rawJSON.getJSONObject("response")
         val results = response.getJSONArray("results")
 
-        for (i in 0..9) {
+        for (i in 0 until results.length()) {
             val item = results.getJSONObject(i)
             val sectionName = item.getString("sectionName")
             val webTitle = item.getString("webTitle")
             val webUrl = item.getString("webUrl")
+            val date = item.getString("webPublicationDate")
 
             Log.d("ParseJSON", "$sectionName, $webTitle, $webUrl")
-            dataArray.add(Data(sectionName, webTitle, webUrl))
+            dataArray.add(Data(sectionName, webTitle, webUrl, date))
         }
 
     } catch (e: JSONException) {
